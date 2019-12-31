@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <title>Résolution de problème PCC</title>
+</head>
+<body onload="">
+
+<div class="result bg-light dark">
+    <div class="container">
+        <h2 class="primary" style="display: inline-block;margin-left:10px;">Résultat du traitement</h2>
+        <label for="resultViewer pull-right" title='fermer' onclick="dropPopup()">X</label>
+        <hr>
+        <div class="row" id="resultViewer"></div>
+    </div>
+</div>
+
+<div class="header bg-primary light" id="tooler">
+    <div class="tools container">
+        <div class="content hidden" id="tooler_tools">
+            <h3 style="margin-top: 0px;display:inline-block;position: absolute;">Outils de création</h3>
+            <div class="row" style="margin-left: 160px;">
+                <ul class="nav">
+                    <li style="margin-right:30px;margin-top: -5px"><button class="btn-circle material-bottom" onclick="drawSommet()" title="Ajouter un ordinateur/serveur"
+                        onmousemove="logger('Ajouter un ordinateur/serveur à l\'espace de travail, il va vous communiquer le nom d\'ordinateur.')"
+                        onmouseout="logger('')">
+                        <img src="images/computer-5.png" width="30px">
+                    </button></li>
+                    <li><button class="btn-circle material-bottom" onclick="processSucces(this, 0)" id='edtS' disabled title="Ajouter arc"
+                        onmousemove="logger('Ajouter un arc entre deux ordinateurs/serveurs.')"
+                        onmouseout="logger('')">&rarrfs;&nbsp;</button></li>
+                    <li><button class="btn-circle material-bottom" onclick="processSucces(this, 2)" id='edtS1' disabled title="Ajouter arret"
+                        onmousemove="logger('Ajouter un arret entre deux ordinateurs/serveurs.')"
+                        onmouseout="logger('')" style="width:60px;padding-left: 16px;">&larrfs;&rarrfs;</button></li>
+                    <li><button class="btn-circle material-bottom" onclick="processSucces(this, 1);logger('Cliquer sur l\'ordinateur de départ.')" id='edtD' disabled title="Outil de supprission"
+                        onmousemove="logger('Supprimer un arc/arret ou un ordinateur/serveur.')"
+                        onmouseout="logger('')">&nbsp;X&nbsp;</button></li>
+                    <li>&nbsp;&nbsp;</li>
+                    <!-- <li><button class="btn-circle material-bottom" onclick="reArrangeElements()" title="Actualiser"
+                        onmousemove="logger('Actualiser les éléments d\'espace de travail et la structure du graphe.')"
+                        onmouseout="logger('')">&nbsp;&circlearrowright;&nbsp;</button></li> -->
+                </ul>
+
+                <div style="margin-left: 40%;display: inline-block;position: absolute;"
+                onmousemove="logger('Effectuer l\'algorithme de <b>dijkstra</b> pour trouver le PCC, puis afficher le résultat.')"
+                onmouseout="logger('')">
+                    <div style="margin-top: 10px;" class="btn-group bg-info-light pull-right" onclick="visualiseGraph(prompt('l\'ordinateur de depart :'))">
+                        <button class="btn-circle bg-primary-dark light hoverable" style="padding: 18px 20px 18px 20px;">&dcy;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="workspace" id="workspace">
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="card" id="welcome">
+                    <div class="container content">
+                        <div class="card-header">
+                            <h2 class="primary">Problème de réseau informatique</h2>
+                        </div>
+                        <div class="card-content row dark">
+                            Bonjour sur l'application de l'implémentation du problème de plus cours chemain.
+                            <br>
+                            Cette application vous permet la simulation d'un cas problème de plus cours chemin(par exemple le 
+                            plus cours chemin dans un réseau informatique pour que les données envoyées arrivent dans le
+                            plus tôt possible).
+                            <br><br>
+                            Pour commancer une nouvelle simulation, clicker sur OK.
+                        </div>
+                        <div class="card-footer">
+                            <br><br><br>
+                            <div class="mybtn-float"
+                            onmousemove="logger('Cliquer ici pour commancer une simulation.')"
+                            onmouseout="logger('')">
+                                <div style="margin-top: 10px;" class="btn-group bg-info-light pull-right" onclick="setupEnvironment()">
+                                    <button class="btn-circle bg-primary light hoverable" style="padding: 20px 18px 20px 18px;">OK</button>
+                                </div>
+                            </div>
+                            <br><br>
+                            <h3>Projet réalisé par :</h3>
+                            <ul>
+                                <li>Zakaria HBA</li>
+                            </ul><br>
+                            <font color="grey">Filière  <b style="color:#234">GLSID 2</b> ENSET-M</font>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="structure"></div>
+                <div class="workinhere">
+                    <div id="workflow"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="statusBar pull-bottom full-col bg-dark light material-top" id="statusBar">
+    <div class="content">
+        <div class="row" id="logger" style="font-size: .8em"></div>
+    </div>
+</div>
+    
+</body>
+</html>

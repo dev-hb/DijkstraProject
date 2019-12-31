@@ -1,0 +1,91 @@
+body{margin:0;padding:0;font-family: roboto, verdana, tahoma, arial;background-color: #f4f5f4;}
+.container{margin:0;padding: 0;}
+.content{padding:10px;}
+.row{display: block;}
+.full-col{width: 100%;}
+.large{padding: 10px;}
+.medium{padding: 5px;}
+.small{padding: 0px;}
+.hidden{display: none;}
+.transparency{opacity: .6;}
+/* Common aspects */
+ul.nav {display: inline-block;margin-left: 120px;}
+ul.nav li{list-style-type: none;float: left;margin-right: 8px;cursor: pointer;}
+/* backgrounds */
+.bg-default{background-color: #c5d8dd;border-color: #ecf0f1;}
+.bg-dark{background-color: #2c3e50;border-color: #2c3e50;}
+.bg-light{background-color: #fff;border-color: #fff;}
+.bg-primary{background-color: #2980b9;border-color: #2980b9;}
+.bg-primary-dark{background-color: #226694f3;border-color: #226694f3;}
+.bg-info{background-color: #3498db;border-color: #3498db;}
+.bg-info-light{background-color: #72bbec;}
+.bg-success{background-color: #27ae60;border-color: #27ae60;}
+.bg-sunny{background-color: #f1c40f;border-color: #f1c40f;}
+.bg-warning{background-color: #f39c12;border-color: #f39c12;}
+.bg-danger{background-color: #e74c3c;border-color: #e74c3c;}
+/* colors */
+.default{color: #ecf0f1;}
+.light{color: #fff;}
+.dark{color: #2c3e50;}
+.primary{color: #2980b9;}
+.info{color: #3498db;}
+.success{color: #27ae60;}
+.sunny{color: #f1c40f;}
+.warning{color: #f39c12;}
+.danger{color: #e74c3c;}
+/* Helpers */
+.pull-left{float: left;}
+.pull-right{float: right;}
+.pull-bottom{position: absolute;bottom: 0;}
+.fix{clear: both;display: inline;}
+.floatted{position: absolute;}
+/* Buttons */
+.btn{border-width: 0px;color:#fff;padding:5px 8px 5px 8px;cursor: pointer;}
+.hoverable{opacity: .8;transition:all .2s ease-out;}
+.hoverable:hover{opacity: 1;transition: all .1s ease-in;}
+.rounded{border-radius: 8px;}
+.outlined{border-width: 2px;background-color: transparent;}
+.material-bottom{box-shadow: 0 1px 2px #345;}
+.material-top{box-shadow: 0 -1px 2px #345;}
+.material-right{box-shadow: 1px 0 2px #345;}
+.material-left{box-shadow: -1px 0 2px #345;}
+.btn-group{border-radius: 50%;z-index: 99;display: inline-block;position: absolute;}
+.btn-group:hover{animation-name: btn-circle-animate;animation-iteration-count: infinite;animation-duration: .7s;
+animation-delay: .2s;transform-origin: center;}
+.btn-circle{border-radius: 50%;border-style: solid;padding: 20px;cursor: pointer;}
+
+@keyframes btn-circle-animate{
+    from {padding: 0px;margin-top: 10px;margin-left: 0px;}
+    to {padding: 10px;margin-top: 0px;margin-left: -10px;}
+}
+
+/* Main Styles */
+.header{box-shadow:0 1px 10px #345;padding:8px;height:30%;}
+.mybtn-float{margin-top: -40px;margin-left: 210px;}
+.card{background-color: #fff;box-shadow: 1px 1px 10px #234;border-radius: 2px;width:500px;margin:auto;
+margin-top:-100px;height:70%;background-image: url(../images/grphbg.png);background-size: 350px;
+background-position: center;background-repeat: no-repeat;background-origin: padding-box;}
+
+#tooler{transition:all .5s ease;}
+#welcome{transition: all .4s ease;}
+#workflow{padding: 30px;margin: auto;float: right;}
+#tooler_tools{opacity: 0;transition: all .2s ease;}
+h2.stt{color: #5a88ca;text-shadow: 1px 1px 2px #b5eb95;margin-top: 0px;}
+
+.sommet{border-radius: 50%;padding:20px;display: inline;cursor: pointer;position: absolute;
+    transition: all .5s ease;left: 20px;}
+.rowMe{padding: 20px;}
+.label-st{display: inline-block;padding:5px;color:#e74c3c;font-weight:bolder;}
+
+#structure{float: left;
+    margin-top: -9px;background-color: rgb(255, 247, 244);width:300px;transition: all .5s ease;scroll-behavior: smooth;
+    overflow: hidden;overflow-y: scroll;margin-left: -10px;display: none;padding: 10px;height: 83%;
+    position: absolute;
+}
+
+.result{z-index: 999;height: 320px;width: 50%;overflow: scroll;position: fixed;margin-top: -2000px;
+    transition: all .5s ease;margin-left: 25%;box-shadow: 0px 0px 15px #345;}
+
+.node{display: inline-block;background-color: #2980b9;padding: 8px;opacity: .9;}
+.result label{color:red;cursor: pointer;margin: 5px;float: right;opacity: .5;transition: opacity .17s ease;}
+.result label:hover{opacity: 1;transition: opacity .2s ease;}
